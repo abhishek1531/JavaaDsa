@@ -76,7 +76,7 @@ public class Loops {
 }
 */
 
-
+/*
 
 class Loops {
     public static void main(String[] args) {
@@ -92,6 +92,40 @@ class Loops {
                 }
             }
             if (prime) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+*/
+
+
+class Loops {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+
+        for(int i = 1; i <= n; i++) {
+            int temp = i;
+            int sum = 0;
+            int digits = 0;
+            int t = temp;
+            while(t > 0) {
+                digits++;
+                t /= 10;
+            }
+
+            t = temp;
+            while(t > 0) {
+                int d = t % 10;
+                int pow = 1;
+                for(int j = 1; j <= digits; j++) {
+                    pow = pow * d;
+                }
+                sum = sum + pow;
+                t /= 10;
+            }
+            if(sum == i) {
                 System.out.print(i + " ");
             }
         }
