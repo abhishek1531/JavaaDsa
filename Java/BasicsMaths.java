@@ -12,6 +12,8 @@
     }
 }*/
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 /*
 public class BasicsMaths {
@@ -96,6 +98,7 @@ public class BasicsMaths {
     }
 }*/
 
+/*
 public class BasicsMaths {
     public static void main(String[] args) {
         int n = 36;
@@ -105,4 +108,96 @@ public class BasicsMaths {
             }
         }
     }
-}
+}*/
+
+/*
+public class BasicsMaths {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        //Print all divisors
+        int n = in.nextInt();
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for(int i = 1 ; i*i<=n ; i++){
+            if(n % i == 0){
+                list.add(i);
+                if(i != n/i){
+                    list.add(n/i);
+                }
+            }
+        }
+        Collections.sort(list);
+
+        for(int x : list){
+            System.out.print(x+" ");
+        }
+    }
+}*/
+
+/*
+public class BasicsMaths {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        //Prime check
+        int n = in.nextInt();
+        int count = 0;
+        for(int i =  1 ; i * i <= n ; i++){
+            if(n % i == 0){
+                count++;
+                if( i != n/i){
+                    count++;
+                }
+            }
+        }
+        if(count == 2){
+            System.out.println(true);
+        }
+        else{
+            System.out.println("false");
+        }
+    }
+}*/
+
+/*
+public class BasicsMaths {
+    public static void main(String[] args) {
+        //GCD or HCF
+        Scanner in = new Scanner(System.in);
+        int n1 = in.nextInt();
+        int n2 = in.nextInt();
+        int gcd = 1;
+        for(int i = 1 ; i<=Math.min(n1 , n2) ; i++){
+            if( n1%i == 0 && n2%i == 0){
+                //System.out.println(i);
+                gcd = i;
+            }
+        }
+        System.out.println(gcd);
+    }
+}*/
+
+/*
+public class BasicsMaths {
+
+    public static void main(String[] args) {
+        //Euclidean Algorithm
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        while(a > 0 && b>0){
+            if(a>b){
+                a = a%b;
+            }
+            else{
+                b = b%a;
+            }
+        }
+        if(a==0){
+            System.out.println(b);
+        }
+        else{
+            System.out.println(a);
+        }
+    }
+}*/
+
