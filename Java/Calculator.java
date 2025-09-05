@@ -1,5 +1,5 @@
 import java.util.*;
-public class Calculator{
+/*public class Calculator{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
@@ -27,6 +27,53 @@ public class Calculator{
             default:
             System.out.println("Invalid operation");
                 break;
+        }
+    }
+}*/
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int choice = sc.nextInt();
+
+        if(choice == 1){   // Factorial
+            int n = sc.nextInt();
+            int fact = 1;
+            for(int i=1; i<=n; i++){
+                fact = fact * i;
+            }
+            System.out.print(fact);
+        }
+        else if(choice == 2){   // GCD
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            while(a != b){
+                if(a > b){
+                    a = a - b;
+                } else {
+                    b = b - a;
+                }
+            }
+            System.out.print(a);
+        }
+        else if(choice == 3){   // Prime Check
+            int p = sc.nextInt();
+            int c = 0;
+            for(int i=2; i<=p/2; i++){
+                if(p % i == 0){
+                    c = 1;
+                    break;
+                }
+            }
+            if(p == 1) System.out.print("Not Prime");
+            else if(c == 0) System.out.print("Prime");
+            else System.out.print("Not Prime");
+        }
+        else{
+            System.out.print("Invalid");
         }
     }
 }
