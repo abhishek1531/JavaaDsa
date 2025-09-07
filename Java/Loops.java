@@ -151,7 +151,7 @@ class Loops {
 }
 */
 
-
+/* 
 public class Loops {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -173,3 +173,22 @@ public class Loops {
     }
 }
 
+*/
+
+
+
+public class Loops {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  // input number
+        int rev = 0;           // to store reverse
+
+        // loop chalega jab tak number 0 nahi ho jata
+        for (; n > 0; n = n / 10) {
+            int d = n % 10;       // last digit nikalna
+            rev = rev * 10 + d;   // reverse banate jana
+        }
+
+        System.out.println(rev);  // final reverse number print
+    }
+}
