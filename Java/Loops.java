@@ -193,6 +193,7 @@ public class Loops {
 }
 */
 
+/* 
 public class Loops {
     public static void main(String[] args) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
@@ -209,3 +210,25 @@ public class Loops {
     }
 }
 
+*/
+
+public class Loops {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();   // input number
+        int temp = n;           // original number store karne ke liye
+        int rev = 0;            // reverse banane ke liye
+
+        while (n > 0) {
+            int d = n % 10;       // last digit
+            rev = rev * 10 + d;   // reverse mein add karo
+            n = n / 10;           // number chhota karo
+        }
+
+        if (rev == temp) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
