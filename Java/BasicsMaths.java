@@ -201,3 +201,26 @@ public class BasicsMaths {
     }
 }*/
 
+
+public class BasicsMaths {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        // input numbers
+        int n1 = in.nextInt();
+        int n2 = in.nextInt();
+
+        int a = n1, b = n2;
+        while(a > 0 && b > 0){
+            if(a > b){
+                a = a % b; 
+            }else{
+                b = b % a;
+            }
+        }
+        int gcd = (a == 0) ? b : a;
+
+        int lcm = (n1 * n2) / gcd;
+
+        System.out.println(lcm);
+    }
+}
