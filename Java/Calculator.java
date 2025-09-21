@@ -31,6 +31,7 @@ import java.util.*;
     }
 }*/
 
+/*
 import java.util.Scanner;
 
 public class Calculator {
@@ -71,6 +72,57 @@ public class Calculator {
             if(p == 1) System.out.print("Not Prime");
             else if(c == 0) System.out.print("Prime");
             else System.out.print("Not Prime");
+        }
+        else{
+            System.out.print("Invalid");
+        }
+    }
+}
+*/
+
+import java.util.Scanner;
+
+public class Calculator{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int choice = sc.nextInt();   // user choice
+        int n = sc.nextInt();        
+        int arr[] = new int[n];
+
+        for(int i=0; i<n; i++){      
+            arr[i] = sc.nextInt();
+        }
+
+        if(choice == 1){   // Maximum
+            int max = arr[0];
+            for(int i=1; i<n; i++){
+                if(arr[i] > max){
+                    max = arr[i];
+                }
+            }
+            System.out.print(max);
+        }
+        else if(choice == 2){   // Minimum
+            int min = arr[0];
+            for(int i=1; i<n; i++){
+                if(arr[i] < min){
+                    min = arr[i];
+                }
+            }
+            System.out.print(min);
+        }
+        else if(choice == 3){   // Reverse
+            for(int i=n-1; i>=0; i--){
+                System.out.print(arr[i] + " ");
+            }
+        }
+        else if(choice == 4){   // Sum
+            int sum = 0;
+            for(int i=0; i<n; i++){
+                sum += arr[i];
+            }
+            System.out.print(sum);
         }
         else{
             System.out.print("Invalid");
