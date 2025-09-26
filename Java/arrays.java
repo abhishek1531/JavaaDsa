@@ -1,12 +1,35 @@
-import java.util.Scanner;
+// import java.util.Scanner;
+// class arrays {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+//         for(int i=0;i<n;i++) arr[i] = sc.nextInt();
+//         int max = arr[0];
+//         for(int i=1;i<n;i++) if(arr[i]>max) max = arr[i];
+//         System.out.println(max);
+//     }
+// }
+
+import java.util.*;
+
 class arrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for(int i=0;i<n;i++) arr[i] = sc.nextInt();
-        int max = arr[0];
-        for(int i=1;i<n;i++) if(arr[i]>max) max = arr[i];
-        System.out.println(max);
+
+        int n = sc.nextInt();   
+        int a[] = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int sum = 0;
+        for(int i = 0; i < n; i++) {
+            sum += a[i];         
+        }
+
+        System.out.print(sum);
     }
 }
+
