@@ -133,6 +133,38 @@
 //     }
 // }
 
+// import java.util.*;
+
+// class arrays {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int a[] = new int[n];
+//         boolean visited[] = new boolean[n];
+
+//         for(int i = 0; i < n; i++) {
+//             a[i] = sc.nextInt();
+//         }
+
+//         for(int i = 0; i < n; i++) {
+//             if(visited[i]) continue;
+
+//             boolean duplicate = false;
+//             for(int j = i+1; j < n; j++) {
+//                 if(a[i] == a[j]) {
+//                     duplicate = true;
+//                     visited[j] = true;
+//                 }
+//             }
+//             if(duplicate) {
+//                 System.out.print(a[i] + " ");
+//             }
+//         }
+//     }
+// }
+
+
 import java.util.*;
 
 class arrays {
@@ -141,25 +173,24 @@ class arrays {
 
         int n = sc.nextInt();
         int a[] = new int[n];
-        boolean visited[] = new boolean[n];
 
         for(int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
 
-        for(int i = 0; i < n; i++) {
-            if(visited[i]) continue;
+        int i = 0, j = n-1;
+        boolean flag = true;
 
-            boolean duplicate = false;
-            for(int j = i+1; j < n; j++) {
-                if(a[i] == a[j]) {
-                    duplicate = true;
-                    visited[j] = true;
-                }
+        while(i < j) {
+            if(a[i] != a[j]) {
+                flag = false;
+                break;
             }
-            if(duplicate) {
-                System.out.print(a[i] + " ");
-            }
+            i++;
+            j--;
         }
+
+        if(flag) System.out.print("YES");
+        else System.out.print("NO");
     }
 }
