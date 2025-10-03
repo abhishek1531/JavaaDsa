@@ -165,6 +165,37 @@
 // }
 
 
+// import java.util.*;
+
+// class arrays {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int a[] = new int[n];
+
+//         for(int i = 0; i < n; i++) {
+//             a[i] = sc.nextInt();
+//         }
+
+//         int i = 0, j = n-1;
+//         boolean flag = true;
+
+//         while(i < j) {
+//             if(a[i] != a[j]) {
+//                 flag = false;
+//                 break;
+//             }
+//             i++;
+//             j--;
+//         }
+
+//         if(flag) System.out.print("YES");
+//         else System.out.print("NO");
+//     }
+// }
+
+
 import java.util.*;
 
 class arrays {
@@ -178,19 +209,16 @@ class arrays {
             a[i] = sc.nextInt();
         }
 
-        int i = 0, j = n-1;
-        boolean flag = true;
+        int key = sc.nextInt();   
+        int index = -1;
 
-        while(i < j) {
-            if(a[i] != a[j]) {
-                flag = false;
+        for(int i = 0; i < n; i++) {
+            if(a[i] == key) {
+                index = i;
                 break;
             }
-            i++;
-            j--;
         }
 
-        if(flag) System.out.print("YES");
-        else System.out.print("NO");
+        System.out.print(index);  
     }
 }
